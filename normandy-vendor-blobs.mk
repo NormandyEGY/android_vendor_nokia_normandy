@@ -52,6 +52,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/etc/UserPolicy.xml:system/etc/UserPolicy.xml \
     vendor/nokia/normandy/proprietary/lib/hw/camera.msm7x27a.so:system/lib/hw/camera.msm7x27a.so \
     vendor/nokia/normandy/proprietary/vendor/lib/hw/power.qcom.so:system/vendor/lib/hw/power.qcom.so \
+    vendor/nokia/normandy/proprietary/vendor/lib/hw/power.msm7x27a.so:system/vendor/lib/hw/power.msm7x27a.so \
     vendor/nokia/normandy/proprietary/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \
     vendor/nokia/normandy/proprietary/lib/libadc.so:system/lib/libadc.so \
     vendor/nokia/normandy/proprietary/lib/libaudioalsa.so:system/lib/libaudioalsa.so \
@@ -72,7 +73,6 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libdsucsd.so:system/lib/libdsucsd.so \
     vendor/nokia/normandy/proprietary/lib/libdsutils.so:system/lib/libdsutils.so \
     vendor/nokia/normandy/proprietary/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
-    vendor/nokia/normandy/proprietary/lib/libextRil.so:system/lib/libextRil.so \
     vendor/nokia/normandy/proprietary/lib/libgemini.so:system/lib/libgemini.so \
     vendor/nokia/normandy/proprietary/lib/libgps.so:system/lib/libgps.so \
     vendor/nokia/normandy/proprietary/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
@@ -196,6 +196,32 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so \
     vendor/nokia/normandy/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
+    vendor/nokia/normandy/proprietary/lib/modules/ath6kl/cfg80211.ko:system/lib/modules/ath6kl/cfg80211.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/ath6kl/ath6kl_sdio.ko:system/lib/modules/ath6kl/ath6kl_sdio.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/test-iosched.ko:system/lib/modules/test-iosched.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_subpagetest.ko:system/lib/modules/mtd_subpagetest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/evbug.ko:system/lib/modules/evbug.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_torturetest.ko:system/lib/modules/mtd_torturetest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/sm_event_log.ko:system/lib/modules/sm_event_log.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/pppoe.ko:system/lib/modules/pppoe.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/lcd.ko:system/lib/modules/lcd.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/cfg80211.ko:system/lib/modules/cfg80211.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_pagetest.ko:system/lib/modules/mtd_pagetest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_readtest.ko:system/lib/modules/mtd_readtest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/sleep_monitor.ko:system/lib/modules/sleep_monitor.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_speedtest.ko:system/lib/modules/mtd_speedtest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_erasepart.ko:system/lib/modules/mtd_erasepart.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_nandecctest.ko:system/lib/modules/mtd_nandecctest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_stresstest.ko:system/lib/modules/mtd_stresstest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mtd_oobtest.ko:system/lib/modules/mtd_oobtest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/sm_event_driver.ko:system/lib/modules/sm_event_driver.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/mmc_block_test.ko:system/lib/modules/mmc_block_test.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/dal_remotetest.ko:system/lib/modules/dal_remotetest.ko \
+    vendor/nokia/normandy/proprietary/lib/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
     vendor/nokia/normandy/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     vendor/nokia/normandy/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
     vendor/nokia/normandy/proprietary/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
@@ -203,6 +229,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/nokia/normandy/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     vendor/nokia/normandy/proprietary/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
+    vendor/nokia/normandy/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
     vendor/nokia/normandy/proprietary/lib/libC2D2.so:system/lib/libC2D2.so \
     vendor/nokia/normandy/proprietary/lib/libgsl.so:system/lib/libgsl.so \
     vendor/nokia/normandy/proprietary/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \

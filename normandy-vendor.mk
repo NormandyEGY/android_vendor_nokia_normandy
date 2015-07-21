@@ -23,6 +23,7 @@ PRODUCT_PACKAGES += \
     libcommondefs \
     libsrsprocessing \
     libqc-opt
+#    libqdutils
 
 $(call inherit-product, vendor/nokia/normandy/normandy-vendor-blobs.mk)
 
