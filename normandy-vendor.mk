@@ -22,10 +22,12 @@ PRODUCT_PACKAGES += \
     libaudcal \
     libcommondefs \
     libsrsprocessing \
-    libqc-opt
+    libqc-opt \
+    libcamera_client \
+    libcameraservice
 #    libqdutils
 
 $(call inherit-product, vendor/nokia/normandy/normandy-vendor-blobs.mk)
 
-PRODUCT_PACKAGES += qcnvitems
-PRODUCT_PACKAGES += qcrilhook
+PRODUCT_PACKAGES += qcmediaplayer
+PRODUCT_PACKAGES += qcom.fmradio
