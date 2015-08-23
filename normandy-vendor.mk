@@ -26,5 +26,5 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, vendor/nokia/normandy/normandy-vendor-blobs.mk)
 
-PRODUCT_PACKAGES += qcnvitems
-PRODUCT_PACKAGES += qcrilhook
+#PRODUCT_PACKAGES += qcnvitems
+#PRODUCT_PACKAGES += qcrilhook

@@ -58,23 +58,26 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/bin/atserver:system/bin/atserver \
     vendor/nokia/normandy/proprietary/bin/abtfilt:system/bin/abtfilt \
     vendor/nokia/normandy/proprietary/bin/akmd8963:system/bin/akmd8963 \
-    vendor/nokia/normandy/proprietary/bin/rild:system/bin/rild
+    vendor/nokia/normandy/proprietary/bin/rild:system/bin/rild \
+    vendor/nokia/normandy/proprietary/bin/radiooptions:system/bin/radiooptions
 
 #ETC
+PRODUCT_COPY_FILES += \
+    vendor/nokia/normandy/proprietary/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
+    vendor/nokia/normandy/proprietary/etc/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
+    vendor/nokia/normandy/proprietary/etc/UserPolicy.xml:system/etc/UserPolicy.xml \
+    vendor/nokia/normandy/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
+    vendor/nokia/normandy/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
+#    vendor/nokia/normandy/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
+#    vendor/nokia/normandy/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+
+#WIFI
 PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/athtcmd_ram.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/athtcmd_ram.bin \
     vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/athwlan.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/athwlan.bin \
     vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin \
     vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin \
     vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/nullTestFlow.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/nullTestFlow.bin \
-    vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/utf.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/utf.bin \
-    vendor/nokia/normandy/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    vendor/nokia/normandy/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
-    vendor/nokia/normandy/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
-    vendor/nokia/normandy/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
-    vendor/nokia/normandy/proprietary/etc/loc_parameter.ini:system/etc/loc_parameter.ini \
-    vendor/nokia/normandy/proprietary/etc/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
-    vendor/nokia/normandy/proprietary/etc/UserPolicy.xml:system/etc/UserPolicy.xml
 
 #Libs
 PRODUCT_COPY_FILES += \
@@ -159,6 +162,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libqmi_csvt_srvc.so:system/lib/libqmi_csvt_srvc.so \
     vendor/nokia/normandy/proprietary/lib/libqmiservices.so:system/lib/libqmiservices.so \
     vendor/nokia/normandy/proprietary/lib/libqueue.so:system/lib/libqueue.so \
+    vendor/nokia/normandy/proprietary/lib/libril.so:system/lib/libril.so \
     vendor/nokia/normandy/proprietary/lib/libril-qc-1.so:system/lib/libril-qc-1.so \
     vendor/nokia/normandy/proprietary/lib/libril-qc-qmi-1.so:system/lib/libril-qc-qmi-1.so \
     vendor/nokia/normandy/proprietary/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
