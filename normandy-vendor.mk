@@ -25,6 +25,3 @@ PRODUCT_PACKAGES += \
     libqc-opt
 
 $(call inherit-product, vendor/nokia/normandy/normandy-vendor-blobs.mk)
-
-#PRODUCT_PACKAGES += qcnvitems
-#PRODUCT_PACKAGES += qcrilhook

@@ -42,7 +42,6 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/bin/thermald:system/bin/thermald \
     vendor/nokia/normandy/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
     vendor/nokia/normandy/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
-    vendor/nokia/normandy/proprietary/bin/hwmac:system/bin/hwmac \
     vendor/nokia/normandy/proprietary/bin/rmt_oeminfo:system/bin/rmt_oeminfo \
     vendor/nokia/normandy/proprietary/bin/sensorservice:system/bin/sensorservice \
     vendor/nokia/normandy/proprietary/bin/wlan_detect:system/bin/wlan_detect \
@@ -58,8 +57,10 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/bin/atserver:system/bin/atserver \
     vendor/nokia/normandy/proprietary/bin/abtfilt:system/bin/abtfilt \
     vendor/nokia/normandy/proprietary/bin/akmd8963:system/bin/akmd8963 \
-    vendor/nokia/normandy/proprietary/bin/rild:system/bin/rild \
-    vendor/nokia/normandy/proprietary/bin/radiooptions:system/bin/radiooptions
+    vendor/nokia/normandy/proprietary/bin/rild:system/bin/rild
+#    vendor/nokia/normandy/proprietary/bin/radiooptions:system/bin/radiooptions
+#    vendor/nokia/normandy/proprietary/bin/hwmac:system/bin/hwmac \
+#    vendor/nokia/normandy/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant
 
 #ETC
 PRODUCT_COPY_FILES += \
@@ -68,20 +69,19 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/etc/UserPolicy.xml:system/etc/UserPolicy.xml \
     vendor/nokia/normandy/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     vendor/nokia/normandy/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
-#    vendor/nokia/normandy/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
-#    vendor/nokia/normandy/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
 
 #WIFI
 PRODUCT_COPY_FILES += \
-    vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/athtcmd_ram.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/athtcmd_ram.bin \
-    vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/athwlan.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/athwlan.bin \
-    vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin \
-    vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin \
-    vendor/nokia/normandy/proprietary/etc/firmware/ath6k/AR6003/hw2.1.1/nullTestFlow.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/nullTestFlow.bin \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/bdata.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/bdata.bin \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/softmac:system/etc/firmware/ath6k/AR6003/hw2.1.1/softmac \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/athtcmd_ram.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/athtcmd_ram.bin \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/utf.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/utf.bin \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/athwlan.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/athwlan.bin \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/nullTestFlow.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/nullTestFlow.bin \
+    vendor/nokia/normandy/proprietary/wifi/ath6k/fw-4.bin:system/etc/firmware/ath6k/AR6003/hw2.1.1/fw-4.bin
 
 #Libs
 PRODUCT_COPY_FILES += \
-    vendor/nokia/normandy/proprietary/lib/hw/camera.msm7x27a.so:system/lib/hw/camera.msm7x27a.so \
     vendor/nokia/normandy/proprietary/lib/hw/sensors.default.so:system/lib/hw/sensors.default.so \
     vendor/nokia/normandy/proprietary/vendor/lib/hw/power.qcom.so:system/vendor/lib/hw/power.qcom.so \
     vendor/nokia/normandy/proprietary/lib/libadc.so:system/lib/libadc.so \
@@ -95,6 +95,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libconfigdb.so:system/lib/libconfigdb.so \
     vendor/nokia/normandy/proprietary/lib/libdiag.so:system/lib/libdiag.so \
     vendor/nokia/normandy/proprietary/lib/libdivxdrmdecrypt.so:system/lib/libdivxdrmdecrypt.so \
+    vendor/nokia/normandy/proprietary/lib/libdivxdrmdecrypt.so:obj/lib/libdivxdrmdecrypt.so \
     vendor/nokia/normandy/proprietary/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
     vendor/nokia/normandy/proprietary/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \
     vendor/nokia/normandy/proprietary/lib/libdsm.so:system/lib/libdsm.so \
@@ -103,7 +104,6 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libdsucsd.so:system/lib/libdsucsd.so \
     vendor/nokia/normandy/proprietary/lib/libdsutils.so:system/lib/libdsutils.so \
     vendor/nokia/normandy/proprietary/lib/libExtendedExtractor.so:system/lib/libExtendedExtractor.so \
-    vendor/nokia/normandy/proprietary/lib/libextRil.so:system/lib/libextRil.so \
     vendor/nokia/normandy/proprietary/lib/libgemini.so:system/lib/libgemini.so \
     vendor/nokia/normandy/proprietary/lib/libgps.so:system/lib/libgps.so \
     vendor/nokia/normandy/proprietary/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
@@ -123,6 +123,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libmmparser.so:system/lib/libmmparser.so \
     vendor/nokia/normandy/proprietary/lib/libnetmgr.so:system/lib/libnetmgr.so \
     vendor/nokia/normandy/proprietary/lib/libnv.so:system/lib/libnv.so \
+    vendor/nokia/normandy/proprietary/lib/libnv.so:obj/lib/libnv.so \
     vendor/nokia/normandy/proprietary/lib/liboem_rapi.so:system/lib/liboem_rapi.so \
     vendor/nokia/normandy/proprietary/lib/libOmxAacDec.so:system/lib/libOmxAacDec.so \
     vendor/nokia/normandy/proprietary/lib/libOmxAacEnc.so:system/lib/libOmxAacEnc.so \
@@ -153,6 +154,7 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libOmxWmaDec.so:system/lib/libOmxWmaDec.so \
     vendor/nokia/normandy/proprietary/lib/libOmxWmvDec.so:system/lib/libOmxWmvDec.so \
     vendor/nokia/normandy/proprietary/lib/liboncrpc.so:system/lib/liboncrpc.so \
+    vendor/nokia/normandy/proprietary/lib/liboncrpc.so:obj/lib/liboncrpc.so \
     vendor/nokia/normandy/proprietary/lib/libpbmlib.so:system/lib/libpbmlib.so \
     vendor/nokia/normandy/proprietary/lib/libqcci_legacy.so:system/lib/libqcci_legacy.so \
     vendor/nokia/normandy/proprietary/lib/libqdi.so:system/lib/libqdi.so \
@@ -222,7 +224,6 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_frameproc.so:system/lib/libmmcamera_frameproc.so \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_hdr_lib.so:system/lib/libmmcamera_hdr_lib.so \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_image_stab.so:system/lib/libmmcamera_image_stab.so \
-    vendor/nokia/normandy/proprietary/lib/libmmcamera_interface2.so:system/lib/libmmcamera_interface2.so \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
     vendor/nokia/normandy/proprietary/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so \
     vendor/nokia/normandy/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
@@ -299,7 +300,8 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/normandy/proprietary/lib/libchromatix_imx105_sunny_preview.so:system/lib/libchromatix_imx105_sunny_preview.so \
     vendor/nokia/normandy/proprietary/lib/libchromatix_s5k4e1_f_default_video.so:system/lib/libchromatix_s5k4e1_f_default_video.so \
     vendor/nokia/normandy/proprietary/lib/liballjoyn.so:system/lib/liballjoyn.so \
-    vendor/nokia/normandy/proprietary/lib/libchromatix_hi542_preview.so:system/lib/libchromatix_hi542_preview.so
+    vendor/nokia/normandy/proprietary/lib/libchromatix_hi542_preview.so:system/lib/libchromatix_hi542_preview.so \
+    vendor/nokia/normandy/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so
 
 #Vendor
 PRODUCT_COPY_FILES += \
